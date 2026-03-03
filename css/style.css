@@ -21,16 +21,16 @@
     --gradient-reverse: linear-gradient(135deg, #3b82f6 0%, #06b6d4 50%, #10b981 100%);
     --gradient-text: linear-gradient(135deg, #10b981 0%, #06b6d4 33%, #3b82f6 66%, #10b981 100%);
 
-    /* Background - Dark Green Tones */
-    --bg-primary: #0a1a14;
-    --bg-secondary: #0d2118;
-    --bg-card: rgba(13, 33, 24, 0.85);
-    --bg-glass: rgba(13, 33, 24, 0.6);
+    /* Background - Original Dark */
+    --bg-primary: #0d0815;
+    --bg-secondary: #130d20;
+    --bg-card: rgba(19, 13, 32, 0.85);
+    --bg-glass: rgba(19, 13, 32, 0.6);
 
     /* Text */
-    --text-primary: #e6fff5;
-    --text-secondary: #a5d4c0;
-    --text-muted: #688f7e;
+    --text-primary: #f0e6ff;
+    --text-secondary: #b8a5d4;
+    --text-muted: #7a6899;
 
     /* Border */
     --border: rgba(16, 185, 129, 0.12);

@@ -19,11 +19,11 @@
     --accent-light: #22d3ee;
     --gradient: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
     --gradient-text: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #10b981 100%);
-    --bg-primary: #0a1a14;
-    --bg-secondary: #0d2118;
-    --bg-card: rgba(13, 33, 24, 0.85);
-    --text-primary: #e6fff5;
-    --text-secondary: #a5d4c0;
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: rgba(18, 18, 26, 0.85);
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0b0;
     --border: rgba(16, 185, 129, 0.15);
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.15);
