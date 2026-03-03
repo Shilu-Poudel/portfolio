@@ -164,7 +164,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const savedTheme = localStorage.getItem('theme') || 'light';
 
-    if (savedTheme === 'light') {
+    if (savedTheme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
         document.documentElement.setAttribute('data-theme', 'light');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
