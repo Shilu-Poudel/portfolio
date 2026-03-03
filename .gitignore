@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Env files (if you move Firebase config to env later)
+.env
+.env.local
