@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silu Poudel | Dashboard</title>
+    <meta name="description" content="Dashboard - Silu Poudel">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='75' font-size='70' fill='white' text-anchor='middle' font-family='Brush Script MT,Segoe Script,cursive' font-style='italic'>SP</text></svg>">
+
+    <!-- Portal CSS -->
+    <link rel="stylesheet" href="css/portal.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Loading State -->
+    <div class="dashboard-loading" id="dashboard-loading">
+        <div class="loader">
+            <div class="loader-inner"></div>
+            <span class="loader-text">SP</span>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard-container hidden" id="dashboard-container">
+        <!-- Top Nav -->
+        <nav class="dashboard-nav">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">Silu</span><span class="logo-dot">.</span>
+            </a>
+            <div class="dashboard-nav-right">
+                <div class="user-info" id="user-info">
+                    <div class="user-avatar" id="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name" id="user-name">User</span>
+                        <span class="user-email" id="user-email">email@example.com</span>
+                    </div>
+                </div>
+                <button class="btn-signout" id="signout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Sign Out</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h1>Welcome, <span class="gradient-text" id="welcome-name">User</span>!</h1>
+                <p>This is your personal dashboard. Exciting things are coming soon!</p>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-grid">
+                <!-- Projects Coming Soon -->
+                <div class="dash-card">
+                    <div class="dash-card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Projects</h3>
+                    <p>Interactive project showcases and demos are being built. Stay tuned for live previews of AI/ML projects!</p>
+                    <div class="coming-soon-badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Blog Coming Soon -->
+                <div class="dash-card">
+                    <div class="dash-card-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Blog</h3>
+                    <p>AI/ML articles, tutorials, and insights will be published here. Follow the journey of building real-world ML systems.</p>
+                    <div class="coming-soon-badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Resources Coming Soon -->
+                <div class="dash-card">
+                    <div class="dash-card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Resources</h3>
+                    <p>Curated collection of ML resources, datasets, model weights, and useful tools for fellow AI enthusiasts.</p>
+                    <div class="coming-soon-badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Community Coming Soon -->
+                <div class="dash-card">
+                    <div class="dash-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>Connect with other developers, share ideas, collaborate on projects, and grow together in the AI/ML space.</p>
+                    <div class="coming-soon-badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <div class="quick-links-grid">
+                    <a href="index.html" class="quick-link">
+                        <i class="fas fa-home"></i>
+                        <span>Portfolio</span>
+                    </a>
+                    <a href="https://github.com/Shilu-Poudel" target="_blank" class="quick-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sheelu-poudel/" target="_blank" class="quick-link">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:sheelupoudel301@gmail.com" class="quick-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="dashboard-footer">
+            <p>&copy; <span id="year"></span> Silu Poudel. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
