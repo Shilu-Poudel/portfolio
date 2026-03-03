@@ -871,29 +871,68 @@ body {
    RESPONSIVE
    ========================================== */
 
+/* Tablet */
 @media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .auth-container {
+        max-width: 100%;
+        padding: 15px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .auth-card {
-        padding: 30px 24px;
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .auth-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .auth-header p {
+        font-size: 0.85rem;
+    }
+
+    .input-wrapper input {
+        padding: 12px 14px 12px 42px;
+        font-size: 0.88rem;
+    }
+
+    .btn-auth {
+        padding: 13px;
+        font-size: 0.9rem;
+    }
+
+    .btn-google {
+        padding: 12px;
+        font-size: 0.88rem;
     }
 
     .back-link {
         top: 15px;
         left: 15px;
         font-size: 0.82rem;
+        padding: 6px 12px;
     }
 
     .back-link span {
         display: none;
     }
 
+    /* Dashboard Mobile */
     .dashboard-nav {
-        padding: 12px 18px;
-        flex-wrap: wrap;
+        padding: 12px 16px;
         gap: 10px;
     }
 
     .dashboard-nav-right {
-        gap: 12px;
+        gap: 10px;
     }
 
     .user-details {
@@ -901,20 +940,43 @@ body {
     }
 
     .dashboard-content {
-        padding: 30px 18px;
+        padding: 24px 16px;
+    }
+
+    .welcome-section {
+        margin-bottom: 30px;
     }
 
     .welcome-section h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .welcome-section p {
+        font-size: 0.88rem;
     }
 
     .dashboard-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 14px;
     }
 
     .dash-card {
-        padding: 24px 20px;
+        padding: 22px 18px;
+    }
+
+    .dash-card-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+    }
+
+    .dash-card h3 {
+        font-size: 1.05rem;
+    }
+
+    .dash-card p {
+        font-size: 0.84rem;
     }
 
     .quick-links-grid {
@@ -923,6 +985,7 @@ body {
 
     .quick-link {
         justify-content: center;
+        padding: 10px 18px;
     }
 
     .btn-signout span {
@@ -934,23 +997,135 @@ body {
     }
 }
 
+/* Small Mobile */
 @media (max-width: 480px) {
     .auth-container {
-        padding: 15px;
+        padding: 10px;
     }
 
     .auth-card {
-        padding: 25px 20px;
-        border-radius: 16px;
+        padding: 24px 18px;
+        border-radius: 14px;
     }
 
     .auth-header h2 {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
+    }
+
+    .auth-header p {
+        font-size: 0.82rem;
+    }
+
+    .input-wrapper {
+        border-radius: 10px;
+    }
+
+    .input-wrapper input {
+        padding: 11px 12px 11px 40px;
+        font-size: 0.85rem;
+    }
+
+    .input-wrapper i:first-child {
+        left: 14px;
+        font-size: 0.85rem;
     }
 
     .form-options {
         flex-direction: column;
         gap: 10px;
+        align-items: flex-start;
+    }
+
+    .btn-auth {
+        padding: 12px;
+        font-size: 0.88rem;
+        border-radius: 10px;
+    }
+
+    .btn-google {
+        padding: 11px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+    }
+
+    .auth-divider {
+        margin: 16px 0;
+    }
+
+    .auth-switch {
+        margin-top: 20px;
+        font-size: 0.82rem;
+    }
+
+    .verify-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .dashboard-nav {
+        padding: 10px 12px;
+    }
+
+    .dashboard-content {
+        padding: 20px 12px;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.25rem;
+    }
+
+    .dash-card {
+        padding: 18px 16px;
+        border-radius: 14px;
+    }
+
+    .coming-soon-badge {
+        font-size: 0.72rem;
+        padding: 5px 12px;
+    }
+
+    .quick-link {
+        font-size: 0.82rem;
+        padding: 10px 16px;
+        border-radius: 10px;
+    }
+
+    .dashboard-footer {
+        font-size: 0.72rem;
+        padding: 16px 12px;
+    }
+}
+
+/* Very Small Mobile (iPhone SE, etc.) */
+@media (max-width: 360px) {
+    .auth-card {
+        padding: 20px 14px;
+    }
+
+    .auth-header h2 {
+        font-size: 1.15rem;
+    }
+
+    .input-wrapper input {
+        padding: 10px 12px 10px 38px;
+        font-size: 0.82rem;
+    }
+
+    .btn-auth, .btn-google {
+        padding: 11px;
+        font-size: 0.82rem;
+    }
+}
+
+/* Landscape fix for mobile */
+@media (max-height: 600px) and (max-width: 768px) {
+    .auth-container {
+        justify-content: flex-start;
+        padding-top: 60px;
+    }
+
+    body {
         align-items: flex-start;
     }
 }

@@ -1765,6 +1765,44 @@ textarea {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-subtitle {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle-wrapper {
+        font-size: 16px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-avatar {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-avatar-icon i {
+        font-size: 70px;
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -1773,11 +1811,65 @@ textarea {
     .btn {
         width: 100%;
         justify-content: center;
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .about-text-block h3 {
+        font-size: 20px;
+    }
+
+    .about-text-block p {
+        font-size: 14px;
     }
 
     .about-cta {
         flex-direction: column;
         align-items: center;
+    }
+
+    .skill-category {
+        padding: 18px;
+        margin-bottom: 16px;
+        border-radius: 14px;
+    }
+
+    .skill-category-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .skill-category-header h3 {
+        font-size: 15px;
+    }
+
+    .skill-tags {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .project-card-content {
+        padding: 20px;
+    }
+
+    .project-card-content h3 {
+        font-size: 18px;
+    }
+
+    .project-card-content > p {
+        font-size: 14px;
+    }
+
+    .project-icon-wrapper {
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
     }
 
     .project-tech {
@@ -1787,6 +1879,95 @@ textarea {
     .project-tech span {
         font-size: 11px;
         padding: 4px 12px;
+    }
+
+    .project-btn {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+
+    .timeline {
+        padding-left: 24px;
+    }
+
+    .timeline::before {
+        left: 6px;
+    }
+
+    .timeline-dot {
+        left: -22px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-content {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .timeline-header h3 {
+        font-size: 16px;
+    }
+
+    .timeline-company {
+        font-size: 13px;
+    }
+
+    .timeline-details li {
+        font-size: 13px;
+        padding-left: 18px;
+    }
+
+    .timeline-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .contact-info h3 {
+        font-size: 22px;
+    }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-logo {
+        font-size: 26px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 14px;
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-avatar {
+        width: 170px;
+        height: 170px;
+    }
+
+    .nav-menu {
+        width: 85%;
     }
 }
 
