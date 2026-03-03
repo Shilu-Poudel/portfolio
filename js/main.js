@@ -161,18 +161,18 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveNav);
 
     // ========== THEME TOGGLE ==========
-    // Always default to dark mode on fresh visit / new tab
-    // Only use sessionStorage so light mode doesn't persist across tabs/visits
-    localStorage.removeItem('theme'); // Clear any old localStorage theme
+    // Default to faint pink (light) on fresh visit / new tab
+    // sessionStorage so preference doesn't stick across new tabs
+    localStorage.removeItem('theme');
     const themeToggle = document.getElementById('theme-toggle');
-    const savedTheme = sessionStorage.getItem('theme') || 'dark';
+    const savedTheme = sessionStorage.getItem('theme') || 'light';
 
-    if (savedTheme === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    } else {
+    if (savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
 
     themeToggle.addEventListener('click', () => {
