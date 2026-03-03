@@ -1,5 +1,5 @@
 /* ==========================================
-   Portal & Dashboard Styles - Pink Theme
+   Portal & Dashboard Styles - Green Theme
    ========================================== */
 
 /* Reset & Variables */
@@ -12,21 +12,21 @@
 }
 
 :root {
-    --primary: #ff6b9d;
-    --primary-light: #ff8bb4;
-    --primary-dark: #e65a8a;
-    --accent: #c084fc;
-    --accent-light: #d8b4fe;
-    --gradient: linear-gradient(135deg, #ff6b9d 0%, #c084fc 100%);
-    --gradient-text: linear-gradient(135deg, #ff6b9d 0%, #c084fc 50%, #ff6b9d 100%);
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-card: rgba(18, 18, 26, 0.85);
-    --text-primary: #f0f0f0;
-    --text-secondary: #a0a0b0;
-    --border: rgba(255, 107, 157, 0.15);
+    --primary: #10b981;
+    --primary-light: #34d399;
+    --primary-dark: #059669;
+    --accent: #06b6d4;
+    --accent-light: #22d3ee;
+    --gradient: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+    --gradient-text: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #10b981 100%);
+    --bg-primary: #0a1a14;
+    --bg-secondary: #0d2118;
+    --bg-card: rgba(13, 33, 24, 0.85);
+    --text-primary: #e6fff5;
+    --text-secondary: #a5d4c0;
+    --border: rgba(16, 185, 129, 0.15);
     --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    --shadow-glow: 0 0 30px rgba(255, 107, 157, 0.15);
+    --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.15);
 }
 
 body {
@@ -210,8 +210,8 @@ body {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 107, 157, 0.4); }
-    50% { transform: scale(1.05); box-shadow: 0 0 20px 5px rgba(255, 107, 157, 0.2); }
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px 5px rgba(16, 185, 129, 0.2); }
 }
 
 /* ==========================================
@@ -258,8 +258,8 @@ body {
 
 .input-wrapper input:focus {
     border-color: var(--primary);
-    background: rgba(255, 107, 157, 0.04);
-    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+    background: rgba(16, 185, 129, 0.04);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }
 
 .input-wrapper input:focus ~ i:first-child,
@@ -392,7 +392,7 @@ body {
 
 .btn-auth:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.35);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.35);
 }
 
 .btn-auth:active {
@@ -448,7 +448,7 @@ body {
 
 .btn-google:hover {
     border-color: var(--primary);
-    background: rgba(255, 107, 157, 0.05);
+    background: rgba(16, 185, 129, 0.05);
     transform: translateY(-1px);
 }
 
@@ -760,7 +760,7 @@ body {
 }
 
 .dash-card:hover {
-    border-color: rgba(255, 107, 157, 0.3);
+    border-color: rgba(16, 185, 129, 0.3);
     transform: translateY(-4px);
     box-shadow: var(--shadow-glow);
 }
@@ -802,8 +802,8 @@ body {
     gap: 6px;
     padding: 6px 14px;
     border-radius: 50px;
-    background: rgba(255, 107, 157, 0.1);
-    border: 1px solid rgba(255, 107, 157, 0.2);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
     color: var(--primary);
     font-size: 0.78rem;
     font-weight: 500;
@@ -854,7 +854,7 @@ body {
 
 .quick-link:hover {
     border-color: var(--primary);
-    background: rgba(255, 107, 157, 0.06);
+    background: rgba(16, 185, 129, 0.06);
     transform: translateY(-2px);
 }
 

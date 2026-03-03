@@ -65,12 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== COLORFUL MOUSE TRAIL ==========
     const trailColors = [
-        '#ff6b9d', '#ff8fb8', '#c084fc', '#818cf8',
-        '#f472b6', '#e879f9', '#a78bfa', '#fb7185',
-        '#f9a8d4', '#d946ef', '#8b5cf6', '#fda4af',
-        '#f0abfc', '#c4b5fd', '#ff63c3', '#a855f7'
+        '#10b981', '#34d399', '#06b6d4', '#22d3ee',
+        '#059669', '#14b8a6', '#0ea5e9', '#38bdf8',
+        '#6ee7b7', '#5eead4', '#67e8f9', '#a7f3d0',
+        '#2dd4bf', '#4ade80', '#0891b2', '#86efac'
     ];
-    const sparkleEmojis = ['✨', '💖', '⭐', '💫', '🌸', '💜', '🩷', '🦋'];
+    const sparkleEmojis = ['✨', '🌿', '⭐', '💫', '🍀', '💚', '🌱', '🦋'];
     let trailCounter = 0;
     let lastTrailTime = 0;
 
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveNav);
 
     // ========== THEME TOGGLE ==========
-    // Default to faint pink (light) on fresh visit / new tab
+    // Default to faint green (light) on fresh visit / new tab
     // sessionStorage so preference doesn't stick across new tabs
     localStorage.removeItem('theme');
     const themeToggle = document.getElementById('theme-toggle');
@@ -258,10 +258,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             draw() {
                 const colors = [
-                    `rgba(255, 107, 157, ${this.opacity})`,
-                    `rgba(192, 132, 252, ${this.opacity})`,
-                    `rgba(129, 140, 248, ${this.opacity})`,
-                    `rgba(244, 114, 182, ${this.opacity})`
+                    `rgba(16, 185, 129, ${this.opacity})`,
+                    `rgba(6, 182, 212, ${this.opacity})`,
+                    `rgba(52, 211, 153, ${this.opacity})`,
+                    `rgba(20, 184, 166, ${this.opacity})`
                 ];
                 ctx.fillStyle = colors[Math.floor(this.x + this.y) % colors.length];
                 ctx.beginPath();
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < 120) {
-                        ctx.strokeStyle = `rgba(255, 107, 157, ${0.1 * (1 - distance / 120)})`;
+                        ctx.strokeStyle = `rgba(16, 185, 129, ${0.1 * (1 - distance / 120)})`;
                         ctx.lineWidth = 0.5;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
@@ -465,6 +465,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    console.log('%c💖 Silu Poudel Portfolio', 'font-size: 20px; font-weight: bold; color: #ff6b9d;');
-    console.log('%cBuilt with 💜 in Nepal', 'font-size: 14px; color: #c084fc;');
+    console.log('%c🌿 Silu Poudel Portfolio', 'font-size: 20px; font-weight: bold; color: #10b981;');
+    console.log('%cBuilt with 💚 in Nepal', 'font-size: 14px; color: #06b6d4;');
 });
