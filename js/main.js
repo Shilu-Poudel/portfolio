@@ -65,12 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== COLORFUL MOUSE TRAIL ==========
     const trailColors = [
-        '#10b981', '#34d399', '#f59e0b', '#fbbf24',
-        '#059669', '#6ee7b7', '#d97706', '#fcd34d',
-        '#a7f3d0', '#4ade80', '#f59e0b', '#86efac',
-        '#34d399', '#fbbf24', '#10b981', '#fde68a'
+        '#a855f7', '#c084fc', '#f59e0b', '#fbbf24',
+        '#9333ea', '#d8b4fe', '#d97706', '#fcd34d',
+        '#e9d5ff', '#7c3aed', '#f59e0b', '#c4b5fd',
+        '#c084fc', '#fbbf24', '#a855f7', '#fde68a'
     ];
-    const sparkleEmojis = ['✨', '🌿', '⭐', '💫', '🍀', '💛', '🌱', '🦋'];
+    const sparkleEmojis = ['✨', '💜', '⭐', '💫', '👑', '💛', '🔮', '🦋'];
     let trailCounter = 0;
     let lastTrailTime = 0;
 
@@ -258,9 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             draw() {
                 const colors = [
-                    `rgba(16, 185, 129, ${this.opacity})`,
+                    `rgba(168, 85, 247, ${this.opacity})`,
                     `rgba(245, 158, 11, ${this.opacity})`,
-                    `rgba(52, 211, 153, ${this.opacity})`,
+                    `rgba(192, 132, 252, ${this.opacity})`,
                     `rgba(251, 191, 36, ${this.opacity})`
                 ];
                 ctx.fillStyle = colors[Math.floor(this.x + this.y) % colors.length];
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < 120) {
-                        ctx.strokeStyle = `rgba(16, 185, 129, ${0.1 * (1 - distance / 120)})`;
+                        ctx.strokeStyle = `rgba(168, 85, 247, ${0.1 * (1 - distance / 120)})`;
                         ctx.lineWidth = 0.5;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
@@ -465,6 +465,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    console.log('%c🌿 Silu Poudel Portfolio', 'font-size: 20px; font-weight: bold; color: #10b981;');
-    console.log('%cBuilt with 💛 in Nepal', 'font-size: 14px; color: #f59e0b;');
+    console.log('%c👑 Silu Poudel Portfolio', 'font-size: 20px; font-weight: bold; color: #a855f7;');
+    console.log('%cBuilt with 💜 in Nepal', 'font-size: 14px; color: #f59e0b;');
 });
