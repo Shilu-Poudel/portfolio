@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== THEME TOGGLE ==========
     const themeToggle = document.getElementById('theme-toggle');
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('theme') || 'light';
 
     if (savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
