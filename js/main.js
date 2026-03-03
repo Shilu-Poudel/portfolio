@@ -162,12 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== THEME TOGGLE ==========
     const themeToggle = document.getElementById('theme-toggle');
-    // Force light theme as default (v2 reset)
-    if (!localStorage.getItem('theme_v2')) {
-        localStorage.setItem('theme', 'light');
-        localStorage.setItem('theme_v2', 'true');
-    }
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
 
     if (savedTheme === 'dark') {
         document.documentElement.removeAttribute('data-theme');
