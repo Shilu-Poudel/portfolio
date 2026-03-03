@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateCursor();
 
         // Cursor hover effects on interactive elements
-        const interactiveElements = document.querySelectorAll('a, button, .skill-card, .project-card, .stat-item');
+        const interactiveElements = document.querySelectorAll('a, button, .skill-category, .project-card-new, .timeline-content, .skill-tag');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursorDot.classList.add('active');
@@ -62,6 +62,51 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ========== COLORFUL MOUSE TRAIL ==========
+    const trailColors = [
+        '#ff6b9d', '#ff8fb8', '#c084fc', '#818cf8',
+        '#f472b6', '#e879f9', '#a78bfa', '#fb7185',
+        '#f9a8d4', '#d946ef', '#8b5cf6', '#fda4af',
+        '#f0abfc', '#c4b5fd', '#ff63c3', '#a855f7'
+    ];
+    const sparkleEmojis = ['✨', '💖', '⭐', '💫', '🌸', '💜', '🩷', '🦋'];
+    let trailCounter = 0;
+    let lastTrailTime = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        const now = Date.now();
+        if (now - lastTrailTime < 30) return; // throttle
+        lastTrailTime = now;
+        trailCounter++;
+
+        // Create colored dot trail
+        const dot = document.createElement('div');
+        dot.classList.add('trail-particle');
+        const color = trailColors[trailCounter % trailColors.length];
+        const size = Math.random() * 10 + 5;
+        dot.style.width = size + 'px';
+        dot.style.height = size + 'px';
+        dot.style.background = color;
+        dot.style.boxShadow = `0 0 ${size}px ${color}`;
+        dot.style.left = e.clientX + (Math.random() - 0.5) * 10 + 'px';
+        dot.style.top = e.clientY + (Math.random() - 0.5) * 10 + 'px';
+        document.body.appendChild(dot);
+
+        // Every 5th move, also add a sparkle emoji
+        if (trailCounter % 5 === 0) {
+            const star = document.createElement('div');
+            star.classList.add('trail-star');
+            star.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+            star.style.left = e.clientX + (Math.random() - 0.5) * 20 + 'px';
+            star.style.top = e.clientY + (Math.random() - 0.5) * 20 + 'px';
+            document.body.appendChild(star);
+            setTimeout(() => star.remove(), 1000);
+        }
+
+        // Remove dot after animation
+        setTimeout(() => dot.remove(), 800);
+    });
 
     // ========== NAVBAR ==========
     const navbar = document.getElementById('navbar');
@@ -139,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== TYPEWRITER EFFECT ==========
     const typewriterElement = document.getElementById('typewriter');
-    const words = ['Developer', 'Designer', 'Creator', 'Innovator', 'Problem Solver'];
+    const words = ['AI Engineer', 'ML Developer', 'Computer Vision Enthusiast', 'NLP Practitioner', 'Problem Solver'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -206,7 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             draw() {
-                ctx.fillStyle = `rgba(108, 99, 255, ${this.opacity})`;
+                const colors = [
+                    `rgba(255, 107, 157, ${this.opacity})`,
+                    `rgba(192, 132, 252, ${this.opacity})`,
+                    `rgba(129, 140, 248, ${this.opacity})`,
+                    `rgba(244, 114, 182, ${this.opacity})`
+                ];
+                ctx.fillStyle = colors[Math.floor(this.x + this.y) % colors.length];
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -230,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
                     if (distance < 120) {
-                        ctx.strokeStyle = `rgba(108, 99, 255, ${0.1 * (1 - distance / 120)})`;
+                        ctx.strokeStyle = `rgba(255, 107, 157, ${0.1 * (1 - distance / 120)})`;
                         ctx.lineWidth = 0.5;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
@@ -408,6 +459,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    console.log('%c🚀 Silu Poudel Portfolio', 'font-size: 20px; font-weight: bold; color: #6c63ff;');
-    console.log('%cBuilt with ❤️ in Nepal', 'font-size: 14px; color: #00d4aa;');
+    console.log('%c💖 Silu Poudel Portfolio', 'font-size: 20px; font-weight: bold; color: #ff6b9d;');
+    console.log('%cBuilt with 💜 in Nepal', 'font-size: 14px; color: #c084fc;');
 });
