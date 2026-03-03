@@ -65,12 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== COLORFUL MOUSE TRAIL ==========
     const trailColors = [
-        '#10b981', '#34d399', '#06b6d4', '#22d3ee',
-        '#059669', '#14b8a6', '#0ea5e9', '#38bdf8',
-        '#6ee7b7', '#5eead4', '#67e8f9', '#a7f3d0',
-        '#2dd4bf', '#4ade80', '#0891b2', '#86efac'
+        '#10b981', '#34d399', '#f59e0b', '#fbbf24',
+        '#059669', '#6ee7b7', '#d97706', '#fcd34d',
+        '#a7f3d0', '#4ade80', '#f59e0b', '#86efac',
+        '#34d399', '#fbbf24', '#10b981', '#fde68a'
     ];
-    const sparkleEmojis = ['✨', '🌿', '⭐', '💫', '🍀', '💚', '🌱', '🦋'];
+    const sparkleEmojis = ['✨', '🌿', '⭐', '💫', '🍀', '💛', '🌱', '🦋'];
     let trailCounter = 0;
     let lastTrailTime = 0;
 
@@ -259,9 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
             draw() {
                 const colors = [
                     `rgba(16, 185, 129, ${this.opacity})`,
-                    `rgba(6, 182, 212, ${this.opacity})`,
+                    `rgba(245, 158, 11, ${this.opacity})`,
                     `rgba(52, 211, 153, ${this.opacity})`,
-                    `rgba(20, 184, 166, ${this.opacity})`
+                    `rgba(251, 191, 36, ${this.opacity})`
                 ];
                 ctx.fillStyle = colors[Math.floor(this.x + this.y) % colors.length];
                 ctx.beginPath();
@@ -466,5 +466,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     console.log('%c🌿 Silu Poudel Portfolio', 'font-size: 20px; font-weight: bold; color: #10b981;');
-    console.log('%cBuilt with 💚 in Nepal', 'font-size: 14px; color: #06b6d4;');
+    console.log('%cBuilt with 💛 in Nepal', 'font-size: 14px; color: #f59e0b;');
 });
