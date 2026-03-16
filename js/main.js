@@ -389,27 +389,19 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
             submitBtn.disabled = true;
 
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                read: false
             };
 
             try {
-                await db.collection('contact-messages').add(formData);
+                await emailjs.send('service_wzxi0um', 'template_wiwxhck', templateParams);
 
                 formStatus.className = 'form-status success';
                 formStatus.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
                 contactForm.reset();
-
-                // Log analytics event
-                analytics.logEvent('contact_form_submitted', {
-                    name: formData.name,
-                    email: formData.email
-                });
 
                 setTimeout(() => {
                     formStatus.className = 'form-status';
