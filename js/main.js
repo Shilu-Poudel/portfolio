@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                await emailjs.send('service_wzxi0um', 'template_wiwxhck', templateParams);
+                await emailjs.send('service_wzxi0um', 'template_w6iksyt', templateParams);
 
                 formStatus.className = 'form-status success';
                 formStatus.textContent = '✅ Message sent successfully! I\'ll get back to you soon.';
