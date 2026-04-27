@@ -351,36 +351,37 @@
                 <div class="section-line"></div>
             </div>
             <div class="projects-grid-new">
-                <!-- Project 1: Face Emotion Recognition -->
+                <!-- Project 1: FastAPI Doc RAG -->
                 <div class="project-card-new" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-card-accent"></div>
                     <div class="project-card-content">
                         <div class="project-icon-wrapper">
-                            <i class="fas fa-face-smile"></i>
+                            <i class="fas fa-server"></i>
                         </div>
-                        <h3>Face Emotion Recognition System</h3>
+                        <h3>FastAPI Document RAG System</h3>
                         <p>
-                            Developed a real-time facial emotion recognition system using the FER2013 dataset 
-                            (48x48 grayscale images). Built and trained a CNN model, implemented techniques to 
-                            reduce overfitting, and deployed live webcam-based emotion detection with avatar mirroring.
+                            Production-ready RAG backend that ingests documents, creates vector embeddings with
+                            OpenAI, and serves answers via REST API. Uses Qdrant as vector store, Redis for caching,
+                            and PyMuPDF + LlamaParse for parsing.
                         </p>
                         <div class="project-impact">
-                            <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                            <h4><i class="fas fa-chart-line"></i> Highlights</h4>
                             <ul>
-                                <li>Improved model generalization through regularization & augmentation</li>
-                                <li>Real-time prediction pipeline with webcam integration</li>
+                                <li>End-to-end ingest → embed → retrieve → respond pipeline</li>
+                                <li>Redis caching cuts repeated query latency</li>
                             </ul>
                         </div>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>CNN</span>
-                            <span>OpenCV</span>
-                            <span>TensorFlow</span>
+                            <span>FastAPI</span>
+                            <span>Qdrant</span>
+                            <span>OpenAI</span>
+                            <span>Redis</span>
+                            <span>LangChain</span>
                         </div>
                         <div class="project-actions">
-                            <span class="project-btn project-btn-private">
-                                <i class="fas fa-lock"></i> Private Repo
-                            </span>
+                            <a href="https://github.com/Shilu-Poudel/fastapi-doc-rag" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -392,25 +393,59 @@
                         <div class="project-icon-wrapper">
                             <i class="fas fa-heart-pulse"></i>
                         </div>
-                        <h3>Mental Health Chatbot System</h3>
+                        <h3>Mental Health Chatbot</h3>
                         <p>
-                            Built an AI-powered mental health chatbot during AI Fellowship at Fuse Machine. 
-                            The system uses NLP techniques to understand user emotions and provide supportive, 
-                            context-aware responses. Implemented text preprocessing, sentiment detection, 
-                            and conversational AI to create a safe and empathetic digital companion.
+                            AI chatbot for emotional support using fine-tuned Qwen models for emotion and intent
+                            classification. Uses FAISS for semantic memory, SQLite for session persistence, and
+                            real-time crisis keyword detection for escalation.
                         </p>
                         <div class="project-impact">
-                            <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                            <h4><i class="fas fa-chart-line"></i> Highlights</h4>
                             <ul>
-                                <li>End-to-end NLP pipeline for emotion-aware conversations</li>
-                                <li>Applied ML model evaluation and optimization techniques</li>
+                                <li>Fine-tuned Qwen 0.6B embeddings + Qwen3 1.7B generation</li>
+                                <li>Crisis detection layer with keyword-based escalation logic</li>
                             </ul>
                         </div>
                         <div class="project-tech">
+                            <span>Qwen</span>
+                            <span>FAISS</span>
+                            <span>SQLite</span>
                             <span>Python</span>
                             <span>NLP</span>
-                            <span>Scikit-learn</span>
-                            <span>Chatbot</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Shilu-Poudel/mental-health-chatbot-using-qwen" target="_blank" class="project-btn">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Face Emotion Recognition -->
+                <div class="project-card-new" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card-accent"></div>
+                    <div class="project-card-content">
+                        <div class="project-icon-wrapper">
+                            <i class="fas fa-face-smile"></i>
+                        </div>
+                        <h3>Face Emotion Recognition System</h3>
+                        <p>
+                            Real-time facial emotion detection trained on FER2013 48x48 grayscale images. Built a
+                            CNN from scratch, reduced overfitting via augmentation and regularization, and integrated
+                            live webcam inference with avatar mirroring.
+                        </p>
+                        <div class="project-impact">
+                            <h4><i class="fas fa-chart-line"></i> Highlights</h4>
+                            <ul>
+                                <li>Custom CNN trained on 35,000+ labeled images</li>
+                                <li>Live prediction with OpenCV webcam</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span>CNN</span>
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                            <span>FER2013</span>
                         </div>
                         <div class="project-actions">
                             <span class="project-btn project-btn-private">
@@ -420,36 +455,37 @@
                     </div>
                 </div>
 
-                <!-- Project 3: FastAPI Doc RAG -->
-                <div class="project-card-new" data-aos="fade-up" data-aos-delay="300">
+                <!-- Project 4: Hybrid OCR Pipeline -->
+                <div class="project-card-new" data-aos="fade-up" data-aos-delay="400">
                     <div class="project-card-accent"></div>
                     <div class="project-card-content">
                         <div class="project-icon-wrapper">
-                            <i class="fas fa-server"></i>
+                            <i class="fas fa-file-invoice"></i>
                         </div>
-                        <h3>FastAPI Document RAG System</h3>
+                        <h3>Hybrid OCR Pipeline — Korean Financial Docs</h3>
                         <p>
-                            Built a Retrieval-Augmented Generation (RAG) backend using FastAPI. 
-                            The system processes documents, creates embeddings, and serves intelligent 
-                            responses through a REST API — bringing ML models into production.
+                            Built a hybrid OCR pipeline at Grinda AI combining PaddleOCR, Qwen-VL, and GLM-4V for
+                            processing Korean financial documents. Generated synthetic training samples and benchmarked
+                            against GPT-4o and Upstage using CER, WER, and TEDS metrics.
                         </p>
                         <div class="project-impact">
-                            <h4><i class="fas fa-chart-line"></i> Impact</h4>
+                            <h4><i class="fas fa-chart-line"></i> Highlights</h4>
                             <ul>
-                                <li>Production-ready API serving ML predictions</li>
-                                <li>Document processing & intelligent retrieval</li>
+                                <li>Hybrid pipeline combining classical OCR with vision-language models</li>
+                                <li>Benchmarked against GPT-4o and Upstage on CER/WER/TEDS</li>
                             </ul>
                         </div>
                         <div class="project-tech">
-                            <span>Python</span>
+                            <span>PaddleOCR</span>
+                            <span>Qwen-VL</span>
+                            <span>GLM-4V</span>
                             <span>FastAPI</span>
-                            <span>RAG</span>
-                            <span>REST API</span>
+                            <span>Python</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/Shilu-Poudel/fastapi-doc-rag" target="_blank" class="project-btn">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
+                            <span class="project-btn project-btn-private">
+                                <i class="fas fa-lock"></i> Private (Company)
+                            </span>
                         </div>
                     </div>
                 </div>
