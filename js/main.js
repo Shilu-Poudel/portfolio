@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== TYPEWRITER EFFECT ==========
     const typewriterElement = document.getElementById('typewriter');
-    const words = ['AI Engineer', 'ML Developer', 'Computer Vision Enthusiast', 'NLP Practitioner', 'Problem Solver'];
+    const words = ['AI Engineer', 'LLM Developer', 'RAG Pipeline Builder', 'Agentic AI Engineer', 'Problem Solver'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
